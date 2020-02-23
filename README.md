@@ -41,6 +41,7 @@ The **GABA** engine is a collection of platform-agnostic modules for creating se
 		new TokenRatesController()
 	]);
 
+
 	datamodel.subscribe((state) => {/* data model has changed */});
     ```
 
