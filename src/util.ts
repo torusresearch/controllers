@@ -110,7 +110,7 @@ export function normalizeTransaction(transaction: Transaction) {
 	let key: keyof Transaction;
 	for (key in NORMALIZERS) {
 		if (transaction[key as keyof Transaction]) {
-			normalizedTransaction[key] = NORMALIZERS[key](transaction[key]);
+			(normalizedTransaction as any)[key] = NORMALIZERS[key](transaction[key]);
 		}
 	}
 	return normalizedTransaction;
